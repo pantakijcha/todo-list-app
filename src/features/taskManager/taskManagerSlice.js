@@ -8,6 +8,7 @@ const initialState = {
   completeList: [],
 };
 
+// Async action
 export const initialTodoList = createAsyncThunk(
   "taskManager/getTodoListFromAPI",
   async () => {

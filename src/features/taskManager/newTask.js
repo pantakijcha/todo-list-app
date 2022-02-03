@@ -10,7 +10,7 @@ function NewTask(props) {
   const dispatch = useDispatch();
 
   const [newTask, setNewTask] = useState("");
-  const [newTaskId, setNewTaskId] = useState(3);
+  const [newTaskId, setNewTaskId] = useState(4);
 
   const AddTask = () => {
     dispatch(addNewTodo({ id: newTaskId, name: newTask }));
@@ -44,6 +44,7 @@ function NewTask(props) {
           onClick={AddTask}
           style={{ marginLeft: "1em", width: "100%" }}
           loading={props.loading}
+          disabled={newTask.length === 0}
         />
       </div>
     </div>
